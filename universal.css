@@ -5,10 +5,18 @@
 }
 body{
     margin:0 auto;
-    /* font-family: Formula-Serial-Regular; */
-    background-color: #f9f7f3;
+    background-color: #f5f5f5;
+    color: #373833;
+    font-family: Aileron-Regular, Arial, sans-serif;
 }
-
+@font-face{
+    font-family:Aileron-Regular;
+    src:url(aileron/Aileron-Regular.otf);
+}
+@font-face{
+    font-family:Aileron-Heavy;
+    src:url(aileron/Aileron-Heavy.otf);
+}
 .imgheader{
 height: 300px;
 background: url(arena-photo.png);
