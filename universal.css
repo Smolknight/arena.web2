@@ -27,3 +27,14 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+
+.headertext{
+    color: #f9f7f3;
+} /*This class is applied to the h1 used inside of the img header div*/
+
+.highlight{
+    background-color: black;
+    opacity: .4;
+    padding-left: 1rem;
+    padding-right: 1rem;
+} /*span with the h1 inside. The highlight class is applied to the span.*/
