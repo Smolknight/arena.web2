@@ -35,6 +35,5 @@ justify-content: center;
 .highlight{
     background-color: black;
     opacity: .4;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 16px;
 } /*span with the h1 inside. The highlight class is applied to the span.*/
