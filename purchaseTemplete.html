@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>purchase</title>
+    <link rel="stylesheet" href="universal.css">
+    <style>
+        .Paycontainer{
+            margin-top: 1em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        .payInfo,.cost{
+            width: 80%; 
+        }
+
+        .hr{
+            margin: 0;
+            width: 80%;
+            height: 0.1em;
+            background-color: black;
+        }
+
+        #email{
+            width:70%;
+            height: 4.5vh;
+            font-size: 0.8em;
+        }
+
+        #smallPrint{
+            font-size: 0.7em;
+            padding-top: 5px;
+        }
+
+        #debit{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Paycontainer">
+        <div class="payInfo">
+            <h1>Contact Info</h1>
+            <br>
+            <h2>Email</h2>
+            <input type="email" id="email" placeholder="Email Address">
+            <p id="smallPrint">Recipet and order confirmation will sent to your email</p>
+            <br>
+            <div class="hr"></div>
+            <br>
+            <h1>Payment Info</h1>
+            <br>
+            <input type="radio" id="credit" value="credit" name="payMethod">
+            <label for="credit">Credit</label>
+            <br>
+            <input type="radio" id="debit" value="debit" name="payMethod">
+            <label for="debit">Debit</label>
+        </div>
+        <div class="cost">
+            eofnuon
+        </div>
+    </div>
+</body>
+</html>
