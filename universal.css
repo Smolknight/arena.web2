@@ -17,9 +17,9 @@ body{
     font-family:Aileron-Heavy;
     src:url(aileron/Aileron-Heavy.otf);
 }
-.imgheader{
+
+.imgheaderinfo{
 height: 300px;
-background: url(arena-photo.png);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
@@ -28,12 +28,35 @@ align-items: center;
 justify-content: center;
 }
 
+/* use a new class for ur specific background: url(____); */
+
+/*header text animation - beginning*/
+.highlight-container{
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
+
 .headertext{
     color: #f9f7f3;
-} /*This class is applied to the h1 used inside of the img header div*/
+    position: relative;
+z-index: 100;
+}
 
 .highlight{
     background-color: black;
     opacity: .4;
-    padding: 16px;
-} /*span with the h1 inside. The highlight class is applied to the span.*/
+    top: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    animation: mymove 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes mymove {
+    from {width: 0%;}
+    to {width: 100%;}
+  }
+/*header text animation - end*/
