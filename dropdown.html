@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .drop{
+            background-color: aqua;
+            width: 40%;
+            text-indent: 20px;
+            height: 7vh;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .drop h1{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="drop" id="drop">
+        <h1 id="dropdown">this is the dropdown label</h1>
+    </div>
+    <br>
+    <div class="drop" id="drop2">
+        <h1 id="dropdown2">this is a second dropdown label</h1>
+    </div>
+</body>
+</html>
+<script>
+    let drop=document.getElementById('drop') //grabs the first dropdown
+    let drop2=document.getElementById('drop2') //grabs the second dropdown
+    let currentDrop='' //used to tell the program which dropdown is selected
+    let dropFlag={ //dlags used to prevent the text being displayed multiple times
+        drop1:false, //mutliple flags used to allow multiple different dropdowns to be displayed at the same time
+        drop2:false,
+        drop3:false
+    }
+
+    drop.addEventListener('click',function(){
+        currentDrop='drop'
+    })
+    drop.addEventListener('click',dropdown)
+
+    drop2.addEventListener('click',function(){
+        currentDrop='drop2'
+    })
+    drop2.addEventListener('click',dropdown)
+
+
+
+    function dropdown(){    //this function is used to create dropdown effect
+        if(currentDrop=='drop'){
+            drop.setAttribute('style','height:30vh;')
+            setTimeout(addText,600)
+        }else if(currentDrop=='drop2'){
+            drop2.setAttribute('style','height:30vh')
+            setTimeout(addText,600)
+        }
+    }
+
+    function addText(){ //used to insert the text
+
+        if(currentDrop=='drop'){ //sets the text for the first/topmost dropdown
+            let p=document.createElement('p')
+        p.innerHTML+=`<br>
+        <br>`
+            p.innerText='denjnommosdakj cisjd vojs,sdf iwd ji wdif wdfowe fowe fowj jfo ewo vowije vow ejov woje ojd fosd vo sdvmaodj vsinvosndji jos    df jkws cisdvjoi dsov sokdmvopsd vlbf dib zdf bo;dzjf blfd bo; fdklb izfd j;odf ;oj df;oj bdzof b;zd fvoj; dzf;jo ijnoi'
+        drop.appendChild(p) //adds the text to the dropdown
+        dropFlag.drop1=true //tells the program the text in first dropdown is displayed
+        }else if(currentDrop=='drop2'){ //sets the text for the second/middle dropdown
+            let p=document.createElement('p')
+        p.innerHTML+=`<br>
+        <br>`
+            p.innerText='12192182918291829'
+            drop2.appendChild(p)//adds the tect to the second dropdown
+            dropFlag.drop2=true 
+        }
+    }
+</script>
