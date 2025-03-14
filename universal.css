@@ -67,3 +67,19 @@ z-index: 100;
     to {width: 100%;}
   }
 /*header text animation - end*/
+
+/*left slide animation 
+    position: relative;
+    animation-name: leftslide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    width: fit-content; 
+
+    @keyframes leftslide {
+   from{
+    transform: translateX(-100vw);
+   }
+   to{
+    transform: translateX(0);
+   }
+  }*/
