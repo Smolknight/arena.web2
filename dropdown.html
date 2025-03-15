@@ -7,20 +7,27 @@
     <style>
         .drop{
             background-color: aqua;
-            width: 40%;
+            width: 80%;
             text-indent: 20px;
             height: 7vh;
             transition: 0.5s;
             cursor: pointer;
         }
-        .drop h1{
+        .drop h1,h2{
             margin: 0;
+        }
+        ul{
+            list-style-type: none;
+            li{
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="drop" id="drop">
-        <h1 id="dropdown">this is the dropdown label</h1>
+        <h1 id="dropdown">Our Rental Rates</h1>
     </div>
     <br>
     <div class="drop" id="drop2">
@@ -32,6 +39,7 @@
     let drop=document.getElementById('drop') //grabs the first dropdown
     let drop2=document.getElementById('drop2') //grabs the second dropdown
     let currentDrop='' //used to tell the program which dropdown is selected
+
     let dropFlag={ //dlags used to prevent the text being displayed multiple times
         drop1:false, //mutliple flags used to allow multiple different dropdowns to be displayed at the same time
         drop2:false,
@@ -52,30 +60,61 @@
 
     function dropdown(){    //this function is used to create dropdown effect
         if(currentDrop=='drop'){
-            drop.setAttribute('style','height:30vh;')
-            setTimeout(addText,600)
+            drop.setAttribute('style','height:50vh;') //adds inline css to increase its size
+            setTimeout(addText,400) //adds a delay before inserting the text
         }else if(currentDrop=='drop2'){
             drop2.setAttribute('style','height:30vh')
-            setTimeout(addText,600)
+            setTimeout(addText,400)
         }
     }
 
     function addText(){ //used to insert the text
+        let p=document.createElement('ul') //creates the paragraph
+        let sportDiv=document.createElement('div')
 
-        if(currentDrop=='drop'){ //sets the text for the first/topmost dropdown
-            let p=document.createElement('p')
-        p.innerHTML+=`<br>
-        <br>`
-            p.innerText='denjnommosdakj cisjd vojs,sdf iwd ji wdif wdfowe fowe fowj jfo ewo vowije vow ejov woje ojd fosd vo sdvmaodj vsinvosndji jos    df jkws cisdvjoi dsov sokdmvopsd vlbf dib zdf bo;dzjf blfd bo; fdklb izfd j;odf ;oj df;oj bdzof b;zd fvoj; dzf;jo ijnoi'
-        drop.appendChild(p) //adds the text to the dropdown
-        dropFlag.drop1=true //tells the program the text in first dropdown is displayed
-        }else if(currentDrop=='drop2'){ //sets the text for the second/middle dropdown
-            let p=document.createElement('p')
-        p.innerHTML+=`<br>
-        <br>`
+        let stageDiv=document.createElement('div')
+        let stageP=document.createElement('ul')
+        if(currentDrop=='drop'){ //checks which dropdown has been recently clicked
+            if(!dropFlag.drop1){ //checks if the text is displayed, runs if it isn't
+            p.innerHTML+=`
+            <h2>Sporting event rate</h2>
+            <li>Inital Price: $3000</li>
+            <li>$150 per hour every additional hour after 8 hours</li>
+            <li>$500 per non-event day</li>
+            <li>Equipment provided: mats, floor covers, tables, and chairs</li>
+            `
+            stageP.innerHTML=`
+            <h2>Stage event rate</h2>
+            <li>Inital Price: $5000</li>
+            <li>$300 per hour every additional hour after 8 hours</li>
+            <li>1000 per non-event day</li>
+            <li>services provided: stage set-up, sound system set-up, and lighting set-up</li>
+            `
+
+            sportDiv.appendChild(p)
+            drop.appendChild(sportDiv)
+
+            stageDiv.appendChild(stageP)
+            drop.appendChild(stageDiv)
+            dropFlag.drop1=true //checks off that the text for the first/top dropdown is being displayed
+            }else{
+                drop.removeAttribute('style') //removes the inline css
+                for(let i=drop.children.length-1;i>0;i--){
+                    drop.removeChild(drop.children[i]) //removes the text
+                }
+                dropFlag.drop1=false //tells the program that the text is not displayed
+            }
+        }else if(currentDrop=='drop2'){
+            if(!dropFlag.drop2){
             p.innerText='12192182918291829'
-            drop2.appendChild(p)//adds the tect to the second dropdown
-            dropFlag.drop2=true 
+            drop2.appendChild(p)
+            dropFlag.drop2=true
+            }else{
+                drop2.removeAttribute('style')
+                drop2.removeChild(drop2.children[1])
+                dropFlag.drop2=false
+            }
         }
     }
+
 </script>
