@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="universal.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        .drop{ /*css for the dropdowns*/
+            background-color: aqua;
+            width: 60%;
+            text-indent: 20px;
+            height: 7vh;
+            transition: 0.5s;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        .drop h1,h2{
+            margin: 0;
+            padding-top: 4px;
+        }
+        ul{
+            margin-top: 1em;
+            list-style-type: none;
+            li{
+                margin-top: 4px;
+                margin-bottom: 4px;
+                text-indent: 35px;
+            }
+        }
+
+        #headImg{
+            width: 100%;
+            height: 25em;
+        }
+
+        .dropDepot{
+            margin-top: 2em;
+        }
+
+        .text{ /*text for the About our arena section*/
+            
+        }
+
+        /*header text animation - beginning*/
+.highlight-container{
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
+
+.headertext{
+    color: #f9f7f3;
+    position: relative;
+z-index: 100;
+}
+
+.highlight{
+    background-color: black;
+    opacity: .4;
+    top: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    animation: mymove 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.imgheaderinfo{
+height: 300px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: url(pexels-van-anh-nguyen-765457258-18960948.jpg);
+}
+
+@keyframes mymove {
+    from {width: 0%;}
+    to {width: 100%;}
+  }
+/*header text animation - end*/
+    </style>
+</head>
+<body>
+
+    <div class="imgheaderinfo">
+        <div class="highlight-container">
+        <span class="highlight"></span>
+        <h1 class="headertext">Arena Rental</h1>
+        </div>
+    </div>
+
+    <div class="text">
+        <h1>About Our Arena</h2>
+        <p>Here in Tumbleweed High School, Our arena has a seating capacity of 3,500 occupants.</p>
+        <p>Making our Arena one of the best places in the valley to hold where high occupancy turn out is expected.</p>
+        <p>No need to worry about seating, our arena can accommodate all your seatings needs</p>
+    </div>
+
+    <div class="dropDepot">
+        <div class="drop" id="drop">
+            <h1 id="dropdown">Our Rental Rates</h1>
+        </div>
+        <br>
+        <div class="drop" id="drop2">
+            <h1 id="dropdown2">Amenities Our Arena comes with</h1>
+        </div>
+    </div>
+    </body>
+    </html>
+<script src="dropdown.js"></script>
