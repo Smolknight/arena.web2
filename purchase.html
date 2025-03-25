@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>purchase</title>
+    <link rel="stylesheet" href="universal.css">
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .Paycontainer{
+            margin-top: 1em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        .payInfo,.cost{
+            width: 80%; 
+        }
+
+        .hr{
+            margin: 0;
+            width: 80%;
+            height: 0.1em;
+            background-color: black;
+        }
+
+        #email{
+            width:70%;
+            height: 4.5vh;
+            font-size: 0.8em;
+        }
+
+        #smallPrint{
+            font-size: 0.7em;
+            padding-top: 5px;
+        }
+
+        #debit{
+            margin-top: 15px;
+        }
+
+        .map{
+            display: flex;
+            justify-self: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 3em;
+        }
+        .map img{
+            width: 70%;
+            height: 60%;
+            margin: 0 auto;
+        }
+        .select{
+            font-size: 1.3em;
+        }
+        #checkoutBtn{
+            font-size: 1.2em;
+            padding: 5px;
+            height: 5vh;
+            width: 18vw;
+        }
+
+        @media screen and (max-width:997px) {
+            #checkoutBtn{
+            font-size: 0.9em;
+        }
+        @media screen and (max-width:774px) {
+            #checkoutBtn{
+                font-size: 0.8em;
+                width: 25vw;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="Paycontainer">
+        <div class="payInfo">
+            <h1>Contact Info</h1>
+            <br>
+            <h2>Email</h2>
+            <input type="email" id="email" placeholder="Email Address">
+            <p id="smallPrint">Recipet and order confirmation will sent to your email</p>
+            <br>
+            <div class="hr"></div>
+            <br>
+            <h1>Payment Info</h1>
+            <br>
+            <input type="radio" id="credit" value="credit" name="payMethod">
+            <label class="select" for="credit">Credit</label>
+            <br>
+            <input type="radio" id="debit" value="debit" name="payMethod">
+            <label  class="select" for="debit">Debit</label>
+        </div>
+        <div class="cost">
+            <h1>Order Details</h1>
+            <h3 style="width: fit-content;">Seating Area: <select name="area" id="areaSelect" style="font-size: 1em;"><option>1A</option><option>1B</option><option>1C</option><option>1D</option><option>2A</option>
+                <option>2B</option>
+                <option>2C</option>
+                <option>2D</option>
+            </select></h3>
+            <br>
+            <h3>Tickets:</h3>
+            <br>
+            <h3>Taxes:</h3>
+            <br>
+            <div class="hr"></div>
+            <br>
+            <h3>Total:</h3>
+            <br>
+            <br>
+            <br>
+            <button id="checkoutBtn">Complete purchase</button>
+        </div>
+    </div>
+    <div class="map">
+        <h1>Seating chart</h1>
+        <img src="Arena-img.png" alt="arenaMap">
+    </div>
+</body>
+</html>
