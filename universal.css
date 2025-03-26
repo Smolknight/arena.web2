@@ -152,3 +152,276 @@ p.contacts, .indent, ul.policy-list{
     animation-fill-mode: forwards;
     width: fit-content;
 }
+
+
+/*HEADER ///////////////////////////////////////////////////////////*/
+.header-home {
+  font-family: Aileron-Regular, Arial, sans-serif;
+  background-color: #35312d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  color: #e3e4de;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.header-home ul {
+  display: flex;
+  list-style-type: none;
+  margin-right: 20px;
+}
+.header-home ul li {
+  padding: 10px;
+}
+.header-home li a {
+  color: #e3e4de;
+  text-decoration: none;
+}
+.header-home a:hover {
+  transition: padding 0.25s linear;
+  background-color:#282522;
+  padding: 5px 10px;
+}
+#logo {
+  width: 200px;
+  height: 110px;
+  margin-left: 20px;
+}
+.header-home img:hover {
+  cursor: pointer;
+}
+.logo-class {
+  display: flex;
+  align-items: center;
+  font-family: Aileron-Heavy, Arial, sans-serif;
+}
+/*END HEADER/////////////////////////////////////////////////*/
+
+.imgheaderinfo-main{
+  height: 600px;
+}
+.imgheaderinfo-main img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+/* Fading animation for slideshow */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*CARD AREA*/
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  text-align: center;
+}
+.flip-card h1{
+  position:fixed;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: -4px -4px black;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #bbb;
+  color: #35312d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flip-card img{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+.flip-card-back {
+  background-color: #35312d;
+  color:#e3e4de;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+}
+.flip-card-back ul{
+  text-align: left;
+}
+.card-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+}
+
+/*CALENDAR AND EVENTS AREA*/
+.descriptor{
+  text-align: center;
+  margin: 100px 0;
+  animation-name: leftslide;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.calendar-and-events{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 50px 0;
+}
+/* .calendar-events{
+  margin-top: 50px;
+} */
+.mySlidesEvent{
+  width: 900px;
+  height: 500px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.mySlidesEvent img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+/*FOOTER////////////////////////////////////*/
+footer {
+  background-color: #35312d;
+  color: #e3e4de;
+  padding: 20px 0;
+  text-align: left;
+  font-family: Aileron-Regular, Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer-main-content{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-main-content div{
+  margin-left: 40px;
+}
+.footer-left{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.social-icons{
+  margin-top: 10px;
+}
+.social-icons i:hover{
+  cursor: pointer;
+}
+.fa-brands{
+  font-size: 20px;
+}
+.fa-instagram{
+  margin-left: 10px;
+}
+.main-links{
+  margin-top: 20px;
+}
+.main-links ul{
+  margin-top: 20px;
+  list-style-type: none;
+}
+.main-links li{
+  margin-top: 10px;
+}
+.main-links a{
+  color: #e3e4de;
+  text-decoration: none;
+  transition: padding 0.5s;
+}
+.main-links a:hover{
+  background-color:#282522;
+  padding: 5px 10px;
+}
+.recent-news{
+  margin-top: 20px;
+}
+.recent-news a{
+  color: #e3e4de;
+  text-decoration: none;
+}
+.recent-news a:hover{
+  background-color:#282522;
+}
+.footer-right{
+  width: 350px;
+  margin-top: 20px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footer-right input{
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: #282522;
+  color: #e3e4de;
+  border-right: none;
+}
+.footer-right button{
+  width: 200px;
+  height: 30px;
+  background-color:#e3e4de;
+  color: #35312d;
+  transition: margin-top 0.25s;
+  font-weight: bold;
+}
+.footer-right button:hover{
+  cursor: pointer;
+  background-color:#bebebc;
+  margin-top: 2px;
+  color:#282522;
+}
+footer p, footer h3 {
+  margin-top: 8px;
+}
+footer hr {
+  margin: 10px 0;
+  border-top: 1px solid #bebebc;
+}
+.rights {
+  text-align: center;
+  margin-top: 20px;
+  color: #aeaea5;
+}
