@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+/* * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: grid;
+  place-items: center;
+  
+} */
+
+.calendar-container {
+  width: 385px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 0;
+  margin: 25px 50px;
+  font-family: Aileron-Regular, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: Aileron-Regular;
+  src: url(aileron/Aileron-Regular.otf);
+}
+
+.calendar-header {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-header #month {
+  color: #35312d;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.all-of-calendar button {
+  width: 37.5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+}
+
+.calendar-header button {
+  background-color: #35312d;
+}
+.weekdays {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #35312d;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.weekdays div {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 2.5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 3px #cbd4c2;
+  color: #69582b;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.day:hover {
+  background-color: rgba(198, 188, 166, 0.1);
+  color: #69582b;
+}
+
+#currentDay {
+  background-color: #e3e4de;
+  color: #fff;
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #67615b;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event.holiday {
+  background-color: palegreen;
+  color: #35312d;
+}
+
+.plain {
+  cursor: default;
+  box-shadow: none;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#addEvent,
+#viewEvent {
+  display: none;
+  width: 350px;
+  background-color: #fff;
+  padding: 25px;
+  position: absolute;
+  z-index: 20;
+}
+
+#addEvent h2,
+#viewEvent h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#txtTitle {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #cbd4c2;
+  font-size: 16px;
+}
+
+#btnSave {
+  background-color: #2ed573;
+}
+
+.btnClose {
+  background-color: #2f3542;
+}
+
+#viewEvent p {
+  margin-bottom: 20px;
+}
+
+#btnDelete {
+  background-color: #ea2027;
+}
+
+.error {
+  border-color: #ea2027 !important;
+}
