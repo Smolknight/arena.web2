@@ -1,5 +1,7 @@
 let drop=document.getElementById('drop') //grabs the first dropdown
 let drop2=document.getElementById('drop2') //grabs the second dropdown
+let plus1=document.getElementById('plus1')
+let plus2=document.getElementById('plus2')
 let currentDrop='' //used to tell the program which dropdown is selected
 
 let dropFlag={ //dlags used to prevent the text being displayed multiple times
@@ -9,11 +11,13 @@ let dropFlag={ //dlags used to prevent the text being displayed multiple times
 
 drop.addEventListener('click',function(){
     currentDrop='drop'
+    plus1.setAttribute('src','oj.png')
 })
 drop.addEventListener('click',dropdown)
 
 drop2.addEventListener('click',function(){
     currentDrop='drop2'
+    plus2.setAttribute('src','oj.png')
 })
 drop2.addEventListener('click',dropdown)
 
@@ -79,6 +83,7 @@ function addText(){ //used to insert the text
                 drop.removeChild(drop.children[i]) //removes the text
             }
             dropFlag.drop1=false //tells the program that the text is not displayed
+            plus1.setAttribute('src','png_9bhbq.png')
         }
     }else if(currentDrop=='drop2'){
         if(!dropFlag.drop2){
@@ -101,6 +106,7 @@ function addText(){ //used to insert the text
             drop2.removeAttribute('style')
             drop2.removeChild(drop2.children[1])
             dropFlag.drop2=false
+            plus2.setAttribute('src','png_9bhbq.png')
         }
     }
 }

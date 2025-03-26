@@ -10,7 +10,6 @@
             margin: 0;
         }
         .drop{ /*css for the dropdowns*/
-            background-color: aqua;
             width: 60%;
             text-indent: 20px;
             height: 7vh;
@@ -18,7 +17,9 @@
             cursor: pointer;
             margin: 0 auto;
         }
-        .drop h1,h2{
+        .drop h1{
+            background-color: #35312d;
+            color: white;
             margin: 0;
             padding-top: 4px;
         }
@@ -32,6 +33,11 @@
             }
         }
 
+        #plus2, #plus1{
+            float: right;
+            width: 1em;
+            height: 1em;
+        }
         #headImg{
             width: 100%;
             height: 25em;
@@ -39,45 +45,26 @@
 
         .dropDepot{
             margin-top: 2em;
+            animation-name: uppies;
+            animation-duration: 4s;
         }
 
-        .text{ /*text for the About our arena section*/
-            
+
+        .text{
+            margin-top: 4em;
         }
 
-        /*header text animation - beginning*/
-.highlight-container{
-    display: inline-block;
-    position: relative;
-    padding: 20px;
-}
 
-.headertext{
-    color: #f9f7f3;
-    position: relative;
-z-index: 100;
-}
-
-.highlight{
-    background-color: black;
-    opacity: .4;
-    top: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    animation: mymove 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
+        @keyframes uppies {
+            from{
+                transform: translateY(100%);
+            }
+            to{
+                transform: translateY(0);
+            }
+        }
 
 .imgheaderinfo{
-height: 300px;
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-display: flex;
-align-items: center;
-justify-content: center;
 background-image: url(pexels-van-anh-nguyen-765457258-18960948.jpg);
 }
 
@@ -97,20 +84,22 @@ background-image: url(pexels-van-anh-nguyen-765457258-18960948.jpg);
         </div>
     </div>
 
-    <div class="text">
-        <h1>About Our Arena</h2>
-        <p>Here in Tumbleweed High School, Our arena has a seating capacity of 3,500 occupants.</p>
-        <p>Making our Arena one of the best places in the valley to hold where high occupancy turn out is expected.</p>
-        <p>No need to worry about seating, our arena can accommodate all your seatings needs</p>
-    </div>
+    <div class="text container-info">
+        <h1 class="label">About Our Arena</h2>
+            <div class="indent">
+                <p>Here in Tumbleweed High School, Our arena has a seating capacity of 3,500 occupants.</p>
+                <p>Making our Arena one of the best places in the valley to hold where high occupancy turn out is expected.</p>
+                <p>No need to worry about seating, our arena can accommodate all your seatings needs</p>
+            </div>
+        </div>
 
     <div class="dropDepot">
         <div class="drop" id="drop">
-            <h1 id="dropdown">Our Rental Rates</h1>
+            <h1 id="dropdown">Our Rental Rates <img id="plus1" src="png_9bhbq.png"></h1>
         </div>
         <br>
         <div class="drop" id="drop2">
-            <h1 id="dropdown2">Amenities Our Arena comes with</h1>
+            <h1 id="dropdown2">Amenities Our Arena comes with<img  id="plus2" src="png_9bhbq.png"></h1>
         </div>
     </div>
     </body>
