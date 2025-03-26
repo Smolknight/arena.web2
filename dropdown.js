@@ -25,7 +25,7 @@ drop2.addEventListener('click',dropdown)
 
 function dropdown(){    //this function is used to create dropdown effect
     if(currentDrop=='drop'){
-        drop.setAttribute('style','height:59vh;') //adds inline css to increase its size
+        drop.setAttribute('style','height:56vh;') //adds inline css to increase its size
         setTimeout(addText,400) //adds a delay before inserting the text
     }else if(currentDrop=='drop2'){
         drop2.setAttribute('style','height:30vh')
