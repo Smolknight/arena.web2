@@ -11,6 +11,184 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="calendar.css">
+    <style>
+  
+@media only screen and (max-width: 1400px){
+  .calendar-and-events{
+    flex-direction: column;
+  }
+}
+  @media only screen and (max-width: 1300px){
+  .card-area{
+    flex-wrap: wrap;
+  }
+  .calendar-and-events{
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 930px){
+  .mySlidesEvent{
+  width: 600px;
+  height: 500px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.mySlidesEvent img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+}
+@media only screen and (max-width: 850px){
+  .footer-main-content{
+  flex-direction: column;
+  align-items: center;
+}
+.main-links{
+  margin-right: 150px;
+}
+}
+@media only screen and (max-width: 768px) {
+  .header-home {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 620px){
+  .mySlidesEvent{
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.mySlidesEvent img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+}
+@media only screen and (max-width: 530px) {
+  .flip-card {
+  width: 400px;
+  height: 400px;
+}
+  .flip-card img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+}
+@media only screen and (max-width: 500px){
+  .mySlidesEvent{
+  width: 300px;
+  height: 400px;
+}
+.mySlidesEvent img{
+  width: 200px;
+  height: 350px;
+  object-fit: cover;
+}
+.flip-card {
+  width: 300px;
+  height: 300px;
+}
+  .flip-card img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.flip-card h1{
+  font-size: 2.5rem;
+  text-shadow: -3px -3px black;
+}
+.flip-card-back {
+  padding: 50px;
+}
+.calendar-container {
+  margin: 25px 0px;
+}
+}
+@media only screen and (max-width: 425px) {
+  .header-home ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-left{
+    word-wrap:normal;
+    margin-right: 30px;
+  }
+  .calendar-container{
+    width: 250px;
+  }
+  .calendar-header {
+  padding: 3.25px;
+}
+
+.calendar-header #month {
+  font-size: 18px;
+}
+
+.all-of-calendar button {
+  width: 24.35px;
+  padding: 3.25px;
+}
+.weekdays {
+  font-size: 14px;
+}
+
+.weekdays div {
+  width: 32.47px;
+  padding: 3.25px;
+}
+.day {
+  width: 32.47px;
+  height: 32.47px;
+  padding: 3.25px;
+  margin: 1.6px;
+}
+.event {
+  font-size: 6.5px;
+  padding: 1.95px;
+  background-color: #67615b;
+  color: #fff;
+  border-radius: 3.25px;
+  max-height: 35.71px;
+  overflow: hidden;
+}
+}
+@media only screen and (max-width: 390px){
+  .footer-right{
+    display: none;
+  }
+}
+@media only screen and (max-width: 350px){
+  .flip-card {
+  width: 250px;
+  height: 250px;
+}
+  .flip-card img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.flip-card h1{
+  font-size: 1.95rem;
+}
+.flip-card-back {
+  padding: 10px;
+}
+.mySlidesEvent{
+  width: 200px;
+  height: 320px;
+}
+.mySlidesEvent img{
+  width: 100px;
+  height: 250px;
+  object-fit: cover;
+}
+}
+
+    </style>
+
   </head>
   <body class="body-home">
     <div class="container-home">
@@ -240,6 +418,48 @@
       logo.addEventListener("click", () => {
         window.open("index.html", "_self");
       });
+
+      //card clicked - shows other side
+      //card 1
+      let card1 = document.getElementsByClassName("flip-card")[0];
+      let cardInner1 = document.getElementsByClassName("flip-card-inner")[0];
+      function flip1(){
+        card1.addEventListener("click", ()=>{
+          cardInner1.style.transform = "rotateY(180deg)"
+          card1.addEventListener("click", ()=>{
+            cardInner1.style.transform = "initial"
+            flip1();
+          })
+      })
+      }
+      flip1();
+      
+      //card 2
+      let card2 = document.getElementsByClassName("flip-card")[1];
+      let cardInner2 = document.getElementsByClassName("flip-card-inner")[1];
+      function flip2(){
+        card2.addEventListener("click", ()=>{
+          cardInner2.style.transform = "rotateY(180deg)"
+          card2.addEventListener("click", ()=>{
+            cardInner2.style.transform = "initial"
+            flip2();
+          })
+      })
+      }
+      flip2();
+      //card 3
+      let card3 = document.getElementsByClassName("flip-card")[2];
+      let cardInner3 = document.getElementsByClassName("flip-card-inner")[2];
+      function flip3(){
+        card3.addEventListener("click", ()=>{
+          cardInner3.style.transform = "rotateY(180deg)"
+          card3.addEventListener("click", ()=>{
+            cardInner3.style.transform = "initial"
+            flip3();
+          })
+      })
+      }
+      flip3();
 
       //slideshow of images
       let slideIndex = 0;
