@@ -512,6 +512,9 @@ footer hr {
   font-size: 2.5rem;
   text-shadow: -3px -3px black;
 }
+.flip-card-back {
+  padding: 50px;
+}
 .calendar-container {
   margin: 25px 0px;
 }
@@ -571,8 +574,8 @@ footer hr {
 }
 @media only screen and (max-width: 350px){
   .flip-card {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
   .flip-card img{
   width: 250px;
@@ -582,9 +585,12 @@ footer hr {
 .flip-card h1{
   font-size: 1.95rem;
 }
+.flip-card-back {
+  padding: 10px;
+}
 .mySlidesEvent{
   width: 200px;
-  height: 300px;
+  height: 320px;
 }
 .mySlidesEvent img{
   width: 100px;
