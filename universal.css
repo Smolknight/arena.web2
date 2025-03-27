@@ -425,6 +425,65 @@ footer hr {
   margin-top: 20px;
   color: #aeaea5;
 }
+@media only screen and (max-width: 1400px){
+  .calendar-and-events{
+    flex-direction: column;
+  }
+}
+  @media only screen and (max-width: 1300px){
+  .card-area{
+    flex-wrap: wrap;
+  }
+  .calendar-and-events{
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 930px){
+  .mySlidesEvent{
+  width: 600px;
+  height: 500px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.mySlidesEvent img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+}
+@media only screen and (max-width: 850px){
+  .footer-main-content{
+  flex-direction: column;
+  align-items: center;
+}
+.main-links{
+  margin-right: 150px;
+}
+}
+@media only screen and (max-width: 768px) {
+  .header-home {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 620px){
+  .mySlidesEvent{
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.mySlidesEvent img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+}
+@media only screen and (max-width: 425px) {
+  .header-home ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .customlink{
 color: #282522; 
