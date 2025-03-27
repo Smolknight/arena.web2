@@ -247,7 +247,7 @@ p.contacts, .indent, ul.policy-list{
   transform-style: preserve-3d;
 }
 .flip-card:hover{
-  cursor:pointer;
+  cursor: pointer;
 }
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -425,6 +425,7 @@ footer hr {
   margin-top: 20px;
   color: #aeaea5;
 }
+
 @media only screen and (max-width: 1400px){
   .calendar-and-events{
     flex-direction: column;
