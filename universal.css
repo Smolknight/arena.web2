@@ -485,12 +485,36 @@ footer hr {
   object-fit: cover;
 }
 }
+@media only screen and (max-width: 490px){
+  .mySlidesEvent{
+  width: 300px;
+  height: 400px;
+}
+.mySlidesEvent img{
+  width: 200px;
+  height: 350px;
+  object-fit: cover;
+}
+.flip-card {
+  width: 300px;
+  height: 300px;
+}
+  .flip-card img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+}
 @media only screen and (max-width: 425px) {
   .header-home ul {
     display: flex;
     flex-direction: column;
   }
+  .footer-left{
+    word-wrap:normal;
+  }
 }
+
 
 .customlink{
 color: #282522; 
