@@ -246,8 +246,8 @@ p.contacts, .indent, ul.policy-list{
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.flip-card:hover{
+  cursor:pointer;
 }
 .flip-card-front, .flip-card-back {
   position: absolute;
