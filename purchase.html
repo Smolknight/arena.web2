@@ -160,13 +160,19 @@
             <h1>Order Details</h1>
             <div class="hr"></div>
             <br>
-            <h3 style="width: fit-content;">Seating Area: <select name="area" id="areaSelect" style="font-size: 1em; width: fit-content;" class="pholder"><option>1A</option><option>1B</option><option>1C</option><option>1D</option><option>2A</option>
+            <h3 style="width: fit-content;">Seating Area: <select name="area" id="areaSelect" style="width: fit-content;" class="pholder"><option>1A</option><option>1B</option><option>1C</option><option>1D</option><option>2A</option>
                 <option>2B</option>
                 <option>2C</option>
                 <option>2D</option>
             </select></h3>
             <br>
-            <h3>Tickets: <select name="tikNum" id='tikSelect' style="font-size: 1em; width: fit-content;" class="pholder">
+            <h3>Event: <select name="event" id="eventSelect" class="pholder" style="width: 40%;">
+            <option>Volleyball Game Apr. 7</option>
+            <option>Spring Dance Apr. 18</option>
+            <option>Art Show Apr. 27</option>
+            </select></h3>
+            <br>
+            <h3>Tickets: <select name="tikNum" id='tikSelect' style="width: fit-content;" class="pholder">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -179,12 +185,14 @@
                 <option>10</option>
             </select></h3>
             <br>
-            <h3>Taxes: </h3>
+            <h3 style="width: 100%;">Tax</h3>
+            <input type="text" id="taxDis" style="width: 30%; height: 4%;" class="pholder">
+            <br>
             <br>
             <div class="hr"></div>
             <br>
-            <h3>Total:</h3>
-            <br>
+            <h3 style="width: 100%;">Total</h3>
+            <input type="text" style="width: 30%; height: 4%;" class="pholder">
             <br>
             <br>
             <button id="checkoutBtn" class="complete">Complete purchase</button>
@@ -247,4 +255,3 @@
       </footer>
     <script src="header-footer.js"></script>
 </body>
-</html>
