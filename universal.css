@@ -489,7 +489,7 @@ footer hr {
   object-fit: cover;
 }
 }
-@media only screen and (max-width: 490px){
+@media only screen and (max-width: 500px){
   .mySlidesEvent{
   width: 300px;
   height: 400px;
@@ -507,6 +507,9 @@ footer hr {
   width: 300px;
   height: 300px;
   object-fit: cover;
+}
+.calendar-container {
+  margin: 25px 0px;
 }
 }
 @media only screen and (max-width: 425px) {
