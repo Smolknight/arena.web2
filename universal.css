@@ -203,13 +203,63 @@ p.contacts, .indent, ul.policy-list{
 /*END HEADER/////////////////////////////////////////////////*/
 
 .imgheaderinfo-main{
-  height: 600px;
+  height: 650px;
 }
 .imgheaderinfo-main img{
   width: 100%;
-  height: 600px;
+  height: 650px;
   object-fit: cover;
 }
+.mySlides{
+  position: relative;
+  text-align: center;
+}
+.mySlides h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 3.5rem;
+  color: #e3e4de;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.mySlides button{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  width: 15%;
+  height: 50px;
+  border-radius: 8px;
+  transition: margin-top 0.25s;
+  font-size: 1.1rem;
+  background-color:#e3e4de;
+  color: #35312d;
+}
+/* @keyframes slide {
+  from{
+   transform: translateX(-200vh);
+  }
+  to{
+   transform: translateX(-50%);
+  }
+ } */
+.mySlides button:hover{
+  cursor: pointer;
+  background-color:#35312d;
+  margin-top: 4px;
+  color:#e3e4de;
+}
+
 /* Fading animation for slideshow */
 .fade {
   animation-name: fade;
@@ -519,6 +569,12 @@ footer hr {
 .calendar-container {
   margin: 25px 0px;
 }
+.mySlides h1{
+  font-size: 2.5rem;
+}
+.mySlides button{
+  width: 25%;
+}
 }
 @media only screen and (max-width: 425px) {
   .header-home ul {
@@ -571,6 +627,12 @@ footer hr {
 @media only screen and (max-width: 390px){
   .footer-right{
     display: none;
+  }
+  .mySlides h1{
+    font-size: 1.95rem;
+  }
+  .mySlides button{
+    width: 30%;
   }
 }
 @media only screen and (max-width: 350px){

@@ -192,7 +192,7 @@
     <div class="container-home">
       <header class="header-home">
         <div class="logo-class">
-          <img id="logo" src="logo!.png" />
+          <img id="logo" alt="tumbleweed high school arena logo" src="logo!.png" />
         </div>
         <nav>
           <ul>
@@ -207,15 +207,21 @@
       <div class="imgheaderinfo-main">
         <div class="slideshow-container">
           <div class="mySlides fade">
-            <img src="happy-people1.jpg" style="width: 100%" />
+            <h1 id="h1">Host Live Concerts, Sporting Events, and More!</h1>
+            <button id="slideButton" onclick="rentNow()">Rent now!</button>
+            <img src="happy-people1-min.jpg" alt="happy people in arena" style="width: 100%" />
           </div>
     
           <div class="mySlides fade">
-            <img src="people-in-arena.jpg" style="width: 100%" />
+            <h1>Host Live Concerts, Sporting Events, and More!</h1>
+            <button>Rent now!</button>
+            <img src="people-in-arena.jpg" alt="large crowd inside arena" style="width: 100%" />
           </div>
     
           <div class="mySlides fade">
-            <img src="kids-in-arena.jpg" style="width: 100%" />
+            <h1>Host Live Concerts, Sporting Events, and More!</h1>
+            <button>Rent now!</button>
+            <img src="kids-in-arena.jpg" alt="kids playing with bubbles inside arena" style="width: 100%" />
           </div>
         </div>
         <br />
@@ -234,7 +240,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <h1>SPORTS</h1>
-                <img src="volleyball.jpg">
+                <img src="volleyball.jpg" alt="volleyball being played by two people">
               </div>
               <div class="flip-card-back">
                 <h3>Sports of every kind!</h3> 
@@ -251,7 +257,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <h1>BUSINESS</h1>
-                <img src="business.jpg">
+                <img src="business.jpg" alt="film camera pointed at woman">
               </div>
               <div class="flip-card-back">
                 <h3>Business+</h3> 
@@ -268,7 +274,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <h1>CONCERTS</h1>
-                <img src="concert.jpg">
+                <img src="concert.jpg" alt="people with hands up at concert inside arena">
               </div>
               <div class="flip-card-back">
                 <h3>Music and more!</h3> 
@@ -326,19 +332,19 @@
           <div class="calendar-events">
               <div class="slideshow-container">
                 <div class="mySlidesEvent fade">
-                  <img src="volleyball-event.jpg" style="width: 100%" />
+                  <img src="volleyball-event.jpg" alt="girls playinf volleyball" style="width: 100%" />
                   <h3>April 7</h3>
                   <p><i>Tumbleweed High School VS Sunrise High School Volleyball Game</i></p>
                 </div>
           
                 <div class="mySlidesEvent fade">
-                  <img src="concert-event.jpg" style="width: 100%" />
+                  <img src="concert-event.jpg" alt="concert stage with big yellow lights" style="width: 100%" />
                   <h3>April 18</h3>
                   <p><i>Spring Concert featuring over 20 local artists</i></p>
                 </div>
           
                 <div class="mySlidesEvent fade">
-                  <img src="art-event.jpg" style="width: 100%" />
+                  <img src="art-event-min.jpg" alt="man showing another man an art piece" style="width: 100%" />
                   <h3>April 27</h3>
                   <p><i>Art Show featuring works from Tumbleweed High School</i></p>
                 </div>
@@ -360,7 +366,7 @@
           <!--logo, address, etc.-->
           <div class="footer-left">
             <div class="logo-class">
-              <img id="logo" src="logo!.png" />
+              <img id="logo" alt="tumbleweed high school arena logo" src="logo!.png" />
             </div>
             <div class="contact-info">
               <h3>Contact Information</h3>
@@ -416,6 +422,23 @@
       logo.addEventListener("click", () => {
         window.open("index.html", "_self");
       });
+
+      //slide transition at load
+      // let h1 = document.getElementById("h1");
+      // let slideBtn = document.getElementById("slideButton");
+      // function atBeginning(){
+      //   for(let i=0;i<1;i++){
+      //     h1.style.animationName = "slide";
+      //     slideBtn.style.animationName = "slide";
+      //   }
+      // }
+      // atBeginning();
+
+
+      //rent now button clicked
+      function rentNow(){
+        window.open("arena-rental-info.html", "_self");
+      }
 
       //card clicked - shows other side
       //card 1
