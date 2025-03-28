@@ -242,7 +242,7 @@ p.contacts, .indent, ul.policy-list{
   border-radius: 8px;
   transition: margin-top 0.25s;
   font-size: 1.1rem;
-    opacity: .4;
+    opacity: .85;
   background-color:#e3e4de;
   color: #35312d;
 }
