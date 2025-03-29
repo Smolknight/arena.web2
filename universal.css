@@ -9,7 +9,7 @@ body{
     color: #35312d;
     font-family: Aileron-Regular, Arial, sans-serif;
     opacity: 0;
-    animation: fadeIn 2s forwards;
+    animation: fadeIn 1s forwards;
 }
 @keyframes fadeIn {
     to {
